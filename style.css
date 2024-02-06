@@ -1,0 +1,144 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url('photographer.jpg');
+    background-size: cover;
+    background-color: black;
+    background-repeat: no-repeat;
+}
+
+header h1 {
+    display: grid;
+    margin: 10px;
+    font-size: 80px;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-shadow: 4px 2px 4px black;
+}
+
+.search-container {
+    display: flex;
+    justify-content: center;
+}
+
+.image-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 10px;
+    margin: 10px;
+    gap: 10px;
+}
+
+.image-container tag {
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    font-family: 'Oleo Script', system-ui;
+}
+
+.image-container takenby {
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    font-family: 'Oleo Script', system-ui;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+input,
+select,
+button,
+span,
+h1 {
+    margin: 10px;
+    padding: 10px;
+    font-size: 25px;
+    font-family: 'Oleo Script', system-ui;
+}
+
+#currentPage {
+    margin: 10px;
+    font-size: 180%;
+    color: white;
+}
+
+.pagination-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+#nextButton,
+#previousButton {
+    display: none;
+}
+
+.image-div {
+    margin: 1%;
+    display: flex;
+    flex-direction: column;
+}
+
+@media screen and (max-width: 768px) {
+    header h1 {
+        text-align: center;
+    }
+
+    .image-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+
+    input,
+    select,
+    button,
+    span,
+    h1 {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    header h1 {
+        text-align: center;
+    }
+
+    .image-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    input,
+    select,
+    button,
+    span,
+    h1 {
+        font-size: 18px;
+    }
+
+    .image-container img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    header h1 {
+        text-align: center;
+    }
+
+    .search-container {
+        flex-direction: column;
+    }
+}

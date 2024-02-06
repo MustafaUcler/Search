@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pixabay Image Search</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Oleo+Script&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+
+        <h1>Pixabay Image Search</h1>
+        <section class="search-container">
+            <input type="text" id="searchInput" placeholder="Search for photos">
+
+            <select id="colorSelect">
+                <option value="any">any color</option>
+                <option value="grayscale">grayscale</option>
+                <option value="transparent">transparent</option>
+                <option value="red">red</option>
+                <option value="orange">orange</option>
+                <option value="yellow">yellow</option>
+                <option value="green">green</option>
+                <option value="turquoise">turquoise</option>
+                <option value="blue">blue</option>
+                <option value="lilac">lilac</option>
+                <option value="pink">pink</option>
+                <option value="white">white</option>
+                <option value="gray">gray</option>
+                <option value="black">black</option>
+                <option value="brown">brown</option>
+            </select>
+
+            <button id="submitButton" onclick="submitSearch()">Submit</button>
+
+        </section>
+
+    </header>
+
+    <main>
+
+        <section class="image-container" id="imageContainer">
+            <!-- Images will be displayed here after searching -->
+        </section>
+
+    </main>
+
+    <footer>
+
+        <section class="pagination-container">
+
+            <button onclick="previousPage()" id="previousButton" disabled>Previous page</button>
+
+            <span id="currentPage"><!-- Current page will be displayed here --></span>
+
+            <button onclick="nextPage()" id="nextButton" disabled>Next page</button>
+
+        </section>
+
+    </footer>
+
+</body>
+
+</html>
